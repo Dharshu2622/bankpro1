@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yuji+Mai&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yuji Mai", serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    background-image: url('/image/background5.webp'); /* Set your background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background image fixed when scrolling */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+    position: relative; /* Allow content to sit above background */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Make the navbar semi-transparent */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add 3D effect to navbar */
+}
+
+.navbar .logo {
+    color: #ecf0f1;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar .nav-links a:hover {
+    color: #3498db;
+}
+
+/* Create Account Section */
+#create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Make the background slightly transparent */
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* Create Account Form Container */
+.create-account-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Set a solid background color */
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 8px 32px rgba(0, 0, 0, 0.2); /* Enhanced 3D shadow */
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Heading Styling */
+.create-account-container h2 {
+    font-size: 2rem;
+    color: #7e1f8f;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Elements Styling */
+.create-account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.create-account-form label {
+    font-size: 1rem;
+    color:whitesmoke;
+    text-align: left;
+    margin-bottom: 0.4rem;
+}
+
+.create-account-form input {
+    padding: 0.8rem;
+    border: 1px solid #671b71;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.create-account-form input:focus {
+    border-color: #7a2d84;
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color:  #7a2d84;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #7a2d84;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 1rem;
+}
+
+.login-link a {
+    color: #7a2d84;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+
+/* Large Screens */
+@media (max-width: 1200px) {
+    .navbar .logo {
+        font-size: 1.6rem;
+    }
+
+    .create-account-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .create-account-container {
+        padding: 2.5rem;
+    }
+
+    .create-account-form input {
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 992px) {
+    /* Navbar Layout */
+    .navbar {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .create-account-container {
+        width: 100%;
+        max-width: 500px;
+        padding: 2rem;
+    }
+
+    .create-account-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .create-account-form input {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    /* Navbar Layout */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .create-account-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 1.5rem;
+    }
+
+    .create-account-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .create-account-form input {
+        font-size: 0.85rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar .logo {
+        font-size: 1.4rem;
+    }
+
+    .create-account-container {
+        width: 100%;
+        max-width: 350px;
+        padding: 1rem;
+    }
+
+    .create-account-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .create-account-form input {
+        font-size: 0.8rem;
+    }
+
+    .submit-btn {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}

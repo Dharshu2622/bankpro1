@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yuji+Mai&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yuji Mai", serif;
+}
+
+/* Body Styling */
+body {
+    background-image: url('/image/background5.webp'); /* Set your background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background image fixed when scrolling */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    color: #ecf0f1;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar .nav-links a:hover {
+    color: #7e1f8f;
+}
+
+/* Withdraw Section */
+#withdraw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5); /* Slight transparency for content */
+    border-radius: 8px;
+}
+
+/* Withdraw Form Container */
+.withdraw-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent white */
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Heading Styling */
+.withdraw-container h2 {
+    font-size: 2rem;
+    color: #7e1f8f;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Elements Styling */
+.withdraw-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.withdraw-form label {
+    font-size: 1rem;
+    color: whitesmoke;
+    text-align: left;
+    margin-bottom: 0.4rem;
+}
+
+.withdraw-form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.withdraw-form input:focus {
+    border-color: #7a2d84;
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #7a2d84;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #7a2d84;
+}
+
+/* Back Link Styling */
+.back-link {
+    margin-top: 1rem;
+}
+
+.back-link a {
+    color: #7a2d84;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+
+/* Large Screens (1200px and below) */
+@media (max-width: 1200px) {
+    .navbar .logo {
+        font-size: 1.6rem;
+    }
+
+    .navbar .nav-links a {
+        font-size: 1rem;
+    }
+
+    .withdraw-container {
+        padding: 2.5rem;
+        max-width: 500px;
+    }
+
+    .withdraw-form input {
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+}
+
+/* Medium Screens (992px and below) */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .withdraw-container {
+        max-width: 450px;
+        padding: 2rem;
+    }
+
+    .withdraw-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .withdraw-form input {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .withdraw-container {
+        max-width: 400px;
+        padding: 1.5rem;
+    }
+
+    .withdraw-form input {
+        font-size: 0.85rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra Small Screens (576px and below) */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar .logo {
+        font-size: 1.4rem;
+    }
+
+    .withdraw-container {
+        max-width: 350px;
+        padding: 1rem;
+    }
+
+    .withdraw-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .withdraw-form input {
+        font-size: 0.8rem;
+    }
+
+    .submit-btn {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
